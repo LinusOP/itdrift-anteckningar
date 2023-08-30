@@ -20,7 +20,7 @@ Tecken 0-9
 Hundratal - 2x100 (Egentligen 2 x 10²)
 ```
 
-Formel: siffra x 10 ^ position (Ex: 8**6**489 - 6an är i position 3 (vi börjar på 0), värde: 6x10³ = 6x1000 = 6000)
+Formel: siffra x 10 ^ position (Ex: 8**6**489 - 6an är i position 3 (vi börjar på 0, från höger), värde: 6x10³ = 6x1000 = 6000)
 
 ### Binärt talsystem
 
@@ -29,7 +29,7 @@ Tecken 0 och 1
 Exempelm, varför behöver vi förstå binära tal:
 En IP adress ex: 192.162.0.10 är egentligen 32 1or och 0or, representerade i bas 10 för människors skull
 
-Formel: siffra x 10 ^ position (Ex: 1**1**10 - 1an har position 2 (börja på 0, från höger), värde: 1x2² = 1x4 = 4)
+Formel: siffra x 2 ^ position (Ex: 1**1**10 - 1an har position 2 (börja på 0, från höger), värde: 1x2² = 1x4 = 4)
 
 #### Terminologi:
 
@@ -105,15 +105,15 @@ Sedan ignorerar vi första talet (du kan inte beskriva 54 med hjälp av 64)
 Sedan börjar vi subtrahera talen från vänster, talen vi kan subtrahera blir 1 i vårt binära tal, resterande 0. Målet är att inte ha något kvar, men vi får inte vara under 0.
 
 ```
-32 16 8 4 2 1
-|  |  | | | |
-|  |  | | | 0 -> 0-1 tar oss annars under
-|  |  | | 1 -> 2 - 2 = 0 (Här är vi klara, resterande till höger är 0)
-|  |  | 1 -> 6 - 4 = 2
-|  |  0 ->  8 - 6 = -2 (Får ej komma under 0)
-|  1 -> 22 - 16 = 6
+32  16  8  4  2  1
+|   |   |  |  |  |
+|   |   |  |  |  0 -> 0-1 tar oss annars under
+|   |   |  |  1 -> 2 - 2 = 0 (Här är vi klara, resterande till höger är 0)
+|   |   |  1 -> 6 - 4 = 2
+|   |   0 ->  8 - 6 = -2 (Får ej komma under 0)
+|   1 -> 22 - 16 = 6
 1 -> 54 - 32 = 22
-1  1  0 1 1 0 = 110110 (54 binärt)
+1   1   0  1  1  0 = 110110 (54 binärt)
 ```
 
 ## Frågor under föreläsning
