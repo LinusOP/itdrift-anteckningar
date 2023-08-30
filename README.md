@@ -7,7 +7,7 @@ Har ni förslag är det bara att höra av er!
 
 Hemsidan är byggd med [Next.js](https://nextjs.org/) och använder [Tailwindcss](https://tailwindcss.com/) för stil och design.  
 Hosting sker igenom [Vercel](vercel.com).  
-Vill man göra en Pull Request (PR) är sådana alltid välkommna.
+Vill man göra en Pull Request (PR) är sådana alltid välkomna.
 
 ---
 
