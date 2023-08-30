@@ -26,7 +26,7 @@ Formel: siffra x 10 ^ position (Ex: 8**6**489 - 6an är i position 3 (vi börjar
 
 Tecken 0 och 1
 
-Exempelm, varför behöver vi förstå binära tal:
+Exempel på varför vi behöver förstå binära tal:  
 En IP adress ex: 192.162.0.10 är egentligen 32 1or och 0or, representerade i bas 10 för människors skull
 
 Formel: siffra x 2 ^ position (Ex: 1**1**10 - 1an har position 2 (börja på 0, från höger), värde: 1x2² = 1x4 = 4)
@@ -89,7 +89,7 @@ Skriv ut varje positions värde, addera där du har en 1a
 Position 5 - Värde 32
 ```
 
-1 finns på position 32, 8, 4, 1  
+1 finns på position 5, 3, 2, 0 vilka har värdena: 32, 8, 4, 1  
 101101 = 32 + 8 + 4 + 1 = 45
 
 ## Ränka bas 10 till bas 2
@@ -124,18 +124,18 @@ Står det t.ex "Vad blir 1010 decimalt?" då krävs endast svar, "10".
 Dock kan man rädda en del av poängen om man visar sin tankegång, även om man i slutändan får fel svar.  
 Därför är det oftast värt att utveckla mer än vad man _måste_ för att vara på den säkra sidan.
 
-**Finns där tentor på canvas?**
+**Finns där gamla tentor på canvas?**
 
-Ja, dessa kan vara något gamla men kan ändå vara bra att ha
+Ja, dessa kan vara något efter eller sakna vissa saker, då kursen uppdaterats, men kan ändå vara bra att ha
 
 **Finns där gränser för U och G på tentor, hur funkar det??**
 
 Ja det finns det, olika för lärare och kurser.
 
-"Standard Erictenta"
-(Poänggränserna brukar även för tentor från andra lärare som Ted osv)
-Totalt - 50p
-VG - 40p
+"Standard Erictenta"  
+(Poänggränserna brukar även vara liknande för tentor från andra lärare som Ted osv)  
+Totalt - 50p  
+VG - 40p  
 G - 25p
 
 (Får man _alla_ rätt får man en pizza (enbart för Erics tentor))
