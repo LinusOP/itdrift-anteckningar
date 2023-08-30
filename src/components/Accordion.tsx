@@ -27,14 +27,14 @@ export default function NavAccordion({
         <Accordion.Item
           value={code}
           key={code}
-          className="group border-b last-of-type:border-b-0"
+          className="group overflow-hidden border-b last-of-type:border-b-0 focus-within:relative focus-within:z-10"
         >
           <Accordion.Trigger className="flex w-full items-center justify-between gap-1 py-3 text-left">
             {name}{" "}
-            <ChevronDown className="group-data-[state=open]:-rotate-180" />
+            <ChevronDown className="transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180" />
           </Accordion.Trigger>
           <Accordion.Content asChild>
-            <ul className="mb-3 ml-5 border-l pl-5">
+            <ul className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp mb-3 ml-5 overflow-hidden border-l pl-5">
               {posts.length > 0 ? (
                 posts.map((post) => (
                   <li
