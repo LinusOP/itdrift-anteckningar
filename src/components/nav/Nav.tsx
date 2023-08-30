@@ -36,6 +36,7 @@ export default async function Nav() {
           href="https://github.com/LinusOP/itdrift-anteckningar"
           target="_blank"
           rel="noopener noreferrer"
+          className="underline"
         >
           Se koden
         </a>
