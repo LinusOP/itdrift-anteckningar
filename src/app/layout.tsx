@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import Nav from "@/components/nav/Nav";
+import { Analytics } from "@vercel/analytics/react";
 
 const font = Open_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -25,6 +26,8 @@ export default function RootLayout({
         <Header />
         <Nav />
         <main>{children}</main>
+        {/* Privacy focused and anonymous data gathering */}
+        <Analytics />
       </body>
     </html>
   );
