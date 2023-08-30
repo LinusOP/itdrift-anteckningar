@@ -20,6 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
       <body
         className={`${font.variable} grid grid-cols-[theme(spacing.80),_1fr] grid-rows-[theme(spacing.20),_1fr] overflow-hidden bg-slate-800 font-sans`}
       >
