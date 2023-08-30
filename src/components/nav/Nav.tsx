@@ -28,7 +28,7 @@ export default async function Nav() {
   );
 
   return (
-    <div className="flex h-fitToHeader flex-col justify-between bg-slate-900 px-3 text-white">
+    <div className="flex h-fitToHeader flex-col justify-between overflow-y-auto bg-slate-900 px-3 text-white">
       <NavAccordion items={formattedData} />
       <div className="flex justify-center gap-1 pb-4">
         Skapad med <Heart className="text-red-600" /> av Linus OP -{" "}

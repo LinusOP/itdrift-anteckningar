@@ -17,7 +17,7 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
-      <ReactMarkdown className="prose prose-invert mx-auto h-fitToHeader max-w-full overflow-y-scroll bg-slate-800 px-5 py-3 lg:prose-lg xl:prose-xl prose-headings:my-2 prose-h1:text-center">
+      <ReactMarkdown className="prose prose-invert mx-auto h-fitToHeader max-w-full overflow-y-auto bg-slate-800 px-5 py-3 lg:prose-lg xl:prose-xl prose-headings:my-2 prose-h1:text-center">
         {content}
       </ReactMarkdown>
     </>
