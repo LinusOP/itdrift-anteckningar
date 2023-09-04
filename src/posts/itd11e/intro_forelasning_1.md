@@ -12,15 +12,16 @@ Positionsbaserade talsystem
 
 Tecken 0-9
 
-```
-2   1   5
-|   |   |
-|   |   Ental - 5x1 (Egentligen 5x10⁰)
-|   Tiotal - 1x10 (Egentligen 1x10¹)
-Hundratal - 2x100 (Egentligen 2 x 10²)
-```
+$$
+\begin{align*}
+  \text{2} \negmedspace & \kern{36mu} 1 \kern{36mu} 5 \\
+  \vert & \kern{36mu} \, \vert \kern{36mu} \lfloor \> \raisebox{-0.5em}{Ental - $5 * 1$ (Egentligen $5 * 10^0$)} \\
+  \vert & \kern{36mu} \kern{2mu} \lfloor \> \raisebox{-0.5em}{Tiotal - $1*10$ (Egentligen $1*10^1$)} \\
+  \lfloor & \> \raisebox{-0.5em}{Hundratal - $1*101$ (Egentligen $1*10^2$)}
+\end{align*}
+$$
 
-Formel: siffra x 10 ^ position (Ex: 8**6**489 - 6an är i position 3 (vi börjar på 0, från höger), värde: 6x10³ = 6x1000 = 6000)
+Formel: $\text{siffra} * 10^\text{position}$ (Ex: 8**6**489 - 6an är i position 3 (vi börjar på 0, från höger), värde: $6*10^3 = 6*1000 = 6000$)
 
 ### Binärt talsystem
 
@@ -29,92 +30,97 @@ Tecken 0 och 1
 Exempel på varför vi behöver förstå binära tal:  
 En IP adress ex: 192.162.0.10 är egentligen 32 1or och 0or, representerade i bas 10 för människors skull
 
-Formel: siffra x 2 ^ position (Ex: 1**1**10 - 1an har position 2 (börja på 0, från höger), värde: 1x2² = 1x4 = 4)
+Formel: $\text{siffra} * 2^\text{position}$ (Ex: 1**1**10 - 1an har position 2 (börja på 0, från höger), värde: $1*2^2 = 1*4 = 4$)
 
 #### Terminologi:
 
 Datorers minsta del är en bit, en 0a eller 1a.
 
-```
-1   0   0   1
-|           |
-|           Minst signifikanta bit (Least Significant Bit, LSB)
-Mest signifikanta bit (Most significant bit, MSB)
-```
+$$
+\begin{align*}
+  \text{1} \negmedspace & \kern{36mu} 0 \kern{36mu} 0 \kern{36mu} 1 \\
+  \vert & \kern{36mu} \quad \kern{36mu} \kern{36mu} \lfloor \> \raisebox{-0.5em}{Minst signifikanta bit (Least Significant Bit, LSB)} \\
+  \lfloor & \> \raisebox{-0.5em}{Mest signifikanta bit (Most significant bit, MSB)}
+\end{align*}
+$$
 
 Ett binärt tal med 8 bitar är en byte
 
 #### Räkna bas 2 till bas 10
 
 Exempel 1:  
-Ex nummer: 1011(bas 2) (4 bitar)
+Ex nummer: $1011_2$ (4 bitar)
 
-```
-Långa versionen:
-1   0   1   1
-|   |   |   |
-|   |   |   1x2⁰ = 1
-|   |   1x2¹ = 1x2 = 2
-|   0x2² = 0x(2x2) = 0x4 = 0
-1x2³ = 1x(2x2x2) = 1x(4x2) = 1x8 = 8
-```
+$$
+\begin{align*}
+  1& \kern{36mu} 0 \kern{36mu} 1 \kern{36mu} 1 \\
+  \vert& \kern{38mu} \vert \kern{40mu} \vert \kern{38mu} \lfloor \> \raisebox{-0.5em}{$1 * 2^0 = 1$} \\
+  \vert& \kern{38mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{$1 * 2^1 = 1*2 = 2$} \\
+  \vert& \kern{36mu} \lfloor \> \raisebox{-0.5em}{$0 * 2^2 = 0*(2*2) = 0*4 = 0$} \\
+  \lfloor& \> \raisebox{-0.5em}{$1 * 2^3 = 1 * (2*2*2) = 1*8 = 8$}
+\end{align*}
+$$
 
-Addera varje positions värde, 8+0+2+1=11
+Addera varje positions värde: $8+0+2+1=11$
 
 Exempel 2:  
-Ex nummer: 101011(bas 2) (6 bitar)
+Ex nummer: $101011_2$ (6 bitar)
 
-```
-1   0   1   0   1   1
-|   |   |   |   |   |
-|   |   |   |   |   1x2⁰ = 1
-|   |   |   |   1x2¹ = 2
-|   |   |   0x2² = 0
-|   |   1x2³ = 8
-|   0x2⁴ = 0
-1x2⁵ = 32
-```
+$$
+\begin{align*}
+  1& \kern{36mu} 0 \kern{36mu} 1 \kern{36mu} 0 \kern{36mu} 1 \kern{36mu} 1 \\
+  \vert& \kern{38mu} \vert \kern{40mu} \vert \kern{40mu} \vert \kern{40mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{$1 * 2^0 = 1$} \\
+  \vert& \kern{38mu} \vert \kern{40mu} \vert \kern{40mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{$1 * 2^1 = 2$} \\
+  \vert& \kern{38mu} \vert \kern{40mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{$0 * 2^2 = 0$} \\
+  \vert& \kern{38mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{$1 * 2^3 = 8$} \\
+  \vert& \kern{36mu} \lfloor \> \raisebox{-0.5em}{$0 * 2^4 = 0$} \\
+  \lfloor& \> \raisebox{-0.5em}{$1 * 2^5 = 32$}
+\end{align*}
+$$
 
 Lathundsvariant:  
 Skriv ut varje positions värde, addera där du har en 1a
 
-```
-1   0   1   1   0   1
-|   |   |   |   |   |
-|   |   |   |   |   Position 0 - Värde 1
-|   |   |   |   Position 1 - Värde 2
-|   |   |   Position 2 - Värde 4
-|   |   Position 3 - Värde 8
-|   Position 4 - Värde 16
-Position 5 - Värde 32
-```
+$$
+\begin{align*}
+  1& \kern{36mu} 0 \kern{36mu} 1 \kern{36mu} 0 \kern{36mu} 1 \kern{36mu} 1 \\
+  \vert& \kern{38mu} \vert \kern{40mu} \vert \kern{40mu} \vert \kern{40mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{Värde 1} \\
+  \vert& \kern{38mu} \vert \kern{40mu} \vert \kern{40mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{Värde 2} \\
+  \vert& \kern{38mu} \vert \kern{40mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{Värde 4} \\
+  \vert& \kern{38mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{Värde 8} \\
+  \vert& \kern{36mu} \lfloor \> \raisebox{-0.5em}{Värde 16} \\
+  \lfloor& \> \raisebox{-0.5em}{Värde 32}
+\end{align*}
+$$
 
 1 finns på position 5, 3, 2, 0 vilka har värdena: 32, 8, 4, 1  
-101101 = 32 + 8 + 4 + 1 = 45
+$101101_2 = $32 + 8 + 4 + 1 = 45_{10}$
 
-## Ränka bas 10 till bas 2
+## Räkna bas 10 till bas 2
 
-Exempel, konvertera 54 (bas 2) till decimalt
+Exempel, konvertera $54_{10}$ till bas 2
 
 Strategi 1 "Pusselmetoden":
 
 Skriv ut varje värde för varje position upp tills vi når talet.  
 64 32 16 8 4 2 1
 
-Sedan ignorerar vi första talet (du kan inte beskriva 54 med hjälp av 64)  
+Sedan ignorerar vi första talet (Sätter du en etta på 64 är du över 52, därmed kan den inte användas för att beskriva 52)  
 Sedan börjar vi subtrahera talen från vänster, talen vi kan subtrahera blir 1 i vårt binära tal, resterande 0. Målet är att inte ha något kvar, men vi får inte vara under 0.
 
-```
-32  16  8  4  2  1
-|   |   |  |  |  |
-|   |   |  |  |  0 -> 0-1 tar oss annars under
-|   |   |  |  1 -> 2 - 2 = 0 (Här är vi klara, resterande till höger är 0)
-|   |   |  1 -> 6 - 4 = 2
-|   |   0 ->  8 - 6 = -2 (Får ej komma under 0)
-|   1 -> 22 - 16 = 6
-1 -> 54 - 32 = 22
-1   1   0  1  1  0 = 110110 (54 binärt)
-```
+$$
+\begin{align*}
+  3&2 \kern{36mu} 16 \kern{36mu} 8 \kern{36mu} 4 \kern{36mu} 2 \kern{36mu} 1 \\
+  \vert& \kern{52mu} \vert \kern{44mu} \vert \kern{40mu} \vert \kern{40mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{$0 \rightarrow 0-1=-1$ vilket bryter vår regel ovan, därmed 0} \\
+  \vert& \kern{52mu} \vert \kern{44mu} \vert \kern{40mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{$1 \rightarrow 2-2=0$ Vilket ger att vi är klara, vi har nått 0, allt till höger är 0} \\
+  \vert& \kern{52mu} \vert \kern{44mu} \vert \kern{39mu} \lfloor \> \raisebox{-0.5em}{$1 \rightarrow 6-4=2$} \\
+  \vert& \kern{52mu} \vert \kern{43mu} \lfloor \> \raisebox{-0.5em}{$0 \rightarrow 6-8 = -1$ (Får ej vara under 0, därmed får positionen 0)} \\
+  \vert& \kern{52mu} \lfloor \> \raisebox{-0.5em}{$1 \rightarrow 22-16=6$} \\
+  \lfloor& \> \raisebox{-0.5em}{$1 \rightarrow 54-32=22$} \\
+  -&-------------- \\
+  1& \kern{50mu} 1 \kern{40mu} 0 \kern{40mu} 1 \kern{40mu} 1 \kern{40mu} 0 \kern{4em} = 110110_2
+\end{align*}
+$$
 
 ## Frågor under föreläsning
 

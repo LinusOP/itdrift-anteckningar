@@ -238,7 +238,7 @@ Exempel tal: $1001,011_2$ till bas 10
 Använd positionernas värde, precis som i föreläsning 1:
 
 $$
-\begin{aligned}
+\begin{align*}
   1& \qquad 0 \qquad 0 \qquad 1, \qquad 0 \qquad 1 \qquad 1 \\
   \vert& \qquad \, \vert \qquad \, \vert \qquad \> \vert \qquad \enspace \vert \qquad \> \vert \qquad \, \lfloor \> \raisebox{-0.5em}{Position -3: $1*2^{-3} \rightarrow$ Se nedan} \\
   \vert& \qquad \, \vert \qquad \, \vert \qquad \> \vert \qquad \enspace \vert \qquad \> \lfloor \> \raisebox{-0.5em}{Position -2: $1*2^{-2} \rightarrow$ Se nedan} \\
@@ -247,7 +247,7 @@ $$
   \vert& \qquad \, \vert \qquad \, \lfloor \> \raisebox{-0.5em}{$0 * 2^1 = 0$} \\
   \vert& \qquad \kern{2mu} \lfloor \> \raisebox{-0.5em}{$0 * 2^1 = 0$} \\
   \lfloor& \> \raisebox{-0.5em}{$1 * 2^3 = 8$}
-\end{aligned}
+\end{align*}
 $$
 
 Potenser med negativa tal:  
@@ -259,60 +259,51 @@ Generell regel: $x^{-y} = \frac{1}{x^y}$ eller i fallet med binära tal: $2^{-y}
 
 Applicera ovan:
 
-```
-1   0   0   1,  0   1   1
-|   |   |   |   |   |   |
-|   |   |   |   |   |   Position -3: 1x2⁻³ = 1 x 1/2³ = 1 x 1/8 = 1 x 0,125 = 0,125
-|   |   |   |   |   Position -2: 1x2⁻² = 1 x 1/2² = 1 x 1/4 = 1 x 0,25 = 0,25
-|   |   |   |   Position -1: 0x2⁻¹ = 0 x 1/2¹ = 0 x 1/2 = 0 x 0,5 = 0
-|   |   |   1 x 2⁰ = 1
-|   |   0 x 2¹ = 0
-|   0 x 2² = 0
-1 x 2³ = 8
-```
-
 $$
-\begin{aligned}
+\begin{align*}
   1& \qquad 0 \qquad 0 \qquad 1, \qquad 0 \qquad 1 \qquad 1 \\
-  \vert& \qquad \, \vert \qquad \, \vert \qquad \> \vert \qquad \enspace \vert \qquad \> \vert \qquad \, \lfloor \> \raisebox{-0.5em}{Position -3: $0*2^{-3} \rightarrow$ Se nedan} \\
-  \vert& \qquad \, \vert \qquad \, \vert \qquad \> \vert \qquad \enspace \vert \qquad \> \lfloor \> \raisebox{-0.5em}{Position -2: $0*2^{-2} \rightarrow$ Se nedan} \\
-  \vert& \qquad \, \vert \qquad \, \vert \qquad \> \vert \qquad \kern{7mu} \lfloor \> \raisebox{-0.5em}{Position -1: $0*2^{-1} \rightarrow$ Se nedan} \\
+  \vert& \qquad \, \vert \qquad \, \vert \qquad \> \vert \qquad \enspace \vert \qquad \> \vert \qquad \, \lfloor \> \raisebox{-0.5em}{Position -3: $1*2^{-3} = 1 * \frac{1}{2^3} = 1 * \frac{1}{8} = 1 * 0,125 = 0,125
+$} \\
+  \vert& \qquad \, \vert \qquad \, \vert \qquad \> \vert \qquad \enspace \vert \qquad \> \lfloor \> \raisebox{-0.5em}{Position -2: $1*2^{-2} = 1 * \frac{1}{2^2} = 1 * \frac{1}{4} = 1 * 0,25 = 0,25
+$} \\
+  \vert& \qquad \, \vert \qquad \, \vert \qquad \> \vert \qquad \kern{7mu} \lfloor \> \raisebox{-0.5em}{Position -1: $0*2^{-1} = 0 * 1 * \frac{1}{2^1} = 0 * 1 * \frac{1}{2} = 0 * 0,5 = 0
+$} \\
   \vert& \qquad \, \vert \qquad \, \vert \qquad \, \lfloor \> \raisebox{-0.5em}{$1 * 2^0 = 1$} \\
   \vert& \qquad \, \vert \qquad \, \lfloor \> \raisebox{-0.5em}{$0 * 2^1 = 0$} \\
   \vert& \qquad \kern{2mu} \lfloor \> \raisebox{-0.5em}{$0 * 2^1 = 0$} \\
   \lfloor& \> \raisebox{-0.5em}{$1 * 2^3 = 8$}
-\end{aligned}
+\end{align*}
 $$
 
 Precis som tidigare adderar vi sedan, heltalsdel och decimaldel var för sig:  
-Heltalsdel: 8 + 1 = 9  
-Decimaldel: 0,25 + 0,125 = 0,375
+Heltalsdel: $8 + 1 = 9$  
+Decimaldel: $0,25 + 0,125 = 0,375$
 
-Lägg ihop delarna: 9 + 0,375 = 9,375  
-1001,011 (bas 2) = 9,375 (bas 10)
+Lägg ihop delarna: $9 + 0,375 = 9,375$  
+$1001,011_2 = 9,375_{10}$
 
 #### Decimalt till binärt
 
 Vi använder svaret från ovan, enbart för att då ser vi enkelt om vi har rätt svar.
 
-Räkna 9,375 (bas 10) till bas 2
+Räkna $9,375_{10}$ till bas 2
 
-Börja med heltalen, 9 (bas 10) till bas 2:  
-Använd metoder från föreläsning 1 eller fusklappen ovan: 9 (bas 10) = 1001 (bas 2)
+Börja med heltalen, $9_{10}$ till bas 2:  
+Använd metoder från föreläsning 1 eller fusklappen ovan: $9_{10} = 1001_2$
 
-Talet hittils: 1001,xxxxx (x är nånting)
+Talet hittils: $1001,xxx$ ($x$ är våra okända decimaler)
 
 Nu decimaldelen:  
-Multiplicera decimalen med basen: 0,375 x 2 = 0,75
+Multiplicera decimalen med basen: $0,375 * 2 = 0,75$
 
-Första talet, till vänster om kommat (**0**,75) sätter vi ut, talet är nu 1001,0xxxx
+Första talet, till vänster om kommat (**0**,75) sätter vi ut, talet är nu $1001,0xxx$
 
 Multiplicera sedan decimaldelen av svaret igen med basen:  
-0,75 x 2 = 1,5 => Sätt ut talet till vänster om kommat: talet är nu 1001,01xxxxx
+$0,75 * 2 = 1,5$ => Sätt ut talet till vänster om kommat: talet är nu $1001,01xxx$
 
 Multiplicera decimaldelen av svaret:  
-0,5 x 2 = 1,0 => Sätt ut heltalet: 1001,011xxxx
+$0,5 x 2 = 1,0$ => Sätt ut heltalet: $1001,011xxx$
 
 Vi har inga decimaler kvar, vi är klara.
 
-9,375 (bas 10) = 1001,011 (bas 2)
+$9,375_{10} = 1001,011_2$
