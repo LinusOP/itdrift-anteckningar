@@ -1,8 +1,8 @@
 ---
-title: Föreläsning 1
+title: Datateknisk Introduktion - Föreläsning 1
 ---
 
-# Föreläsning 1
+# Datateknisk Introduktion - Föreläsning 1
 
 ## Talsystem
 

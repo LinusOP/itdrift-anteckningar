@@ -1,8 +1,8 @@
 ---
-title: Föreläsning 2
+title: Datateknisk Introduktion - Föreläsning 2
 ---
 
-# Föreläsning 2
+# Datateknisk Introduktion - Föreläsning 2
 
 **Ej renskriven**
 
