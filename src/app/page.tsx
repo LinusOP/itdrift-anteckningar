@@ -1,8 +1,8 @@
 export default function Home() {
   return (
-    <main className="prose prose-invert mx-auto grid h-full place-items-center text-center lg:prose-lg xl:prose-xl">
+    <div className="prose-defaults mx-auto grid h-full place-items-center p-5 text-center">
       <div>
-        <h1>Anteckningar för IT-Driftteknikerprogrammet</h1>
+        <h1>Anteckningar för studenter på IT-Drift 2023</h1>
         <p>
           Här hittar ni anteckningar för förläsningar i samtliga kurser. Hittils
           är kurser för termin 1 tillagdna i listan till vänster.
@@ -16,6 +16,6 @@ export default function Home() {
           <a href="mailto:mail@linusop.se">mail@linusop.se</a>
         </p>
       </div>
-    </main>
+    </div>
   );
 }

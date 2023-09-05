@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.prose-defaults {
+  @apply prose prose-sm prose-invert sm:prose-base lg:prose-lg xl:prose-xl;
+}
