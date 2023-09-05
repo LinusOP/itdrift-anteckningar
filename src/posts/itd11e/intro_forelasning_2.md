@@ -4,8 +4,6 @@ title: Datateknisk Introduktion - Föreläsning 2
 
 # Datateknisk Introduktion - Föreläsning 2
 
-**Ej renskriven**
-
 ## Fortsättning på föreläsning 1
 
 Notera att föregående föreläsning avslutades med genomgång av strategi 1 "Pusselmetoden".
@@ -229,7 +227,10 @@ $7^3 - 1 = 343 - 1 = 342$
 ### Konvertera binärt till/från decimalt med decimaldel/binaldel
 
 Decimaldel / Binaldel:  
-Är den delen efter kommat, i 8,94 är ,94 binaldelen. Termen "binaldel" måste man inte kunna och nedan kallar jag den decimaldel för enkelhetens skull.
+Är delen efter kommat, i 8,94 är ,94 decimaldelen. Termen "binaldel" är namnet på denna del i ett binärt tal. Dvs att i 1010,01 är ,01 binaldelen, siffrorna efter kommat kallas binaler istället för decimaler.  
+Detta måste man inte kunna och nedan kallar jag dessa oavsett bas för decimaldel och decimaler, för enkelhetens skull.
+
+(I hexadecimala tal kallas delen för hexaldel, och siffrorna kallas hexaler)
 
 #### Binärt till decimalt
 
