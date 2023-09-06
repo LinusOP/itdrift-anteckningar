@@ -58,7 +58,7 @@ Intern struktur:
   - Tolkar och styr övriga delar
 - Aritmetisk Logisk Enhet (ALU)
   - I princip en kalkylator
-  -
+  - Utför logiska operationer
 - Register (minnesplatser) - Se nedan
 
 #### Register
