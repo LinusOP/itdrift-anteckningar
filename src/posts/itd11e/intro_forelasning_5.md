@@ -132,7 +132,7 @@ Först måste vi kolla på mängden data vi ska lagra, samt hur mycket vi lagrar
 
 Om vi antar att vi har en modern dator som arbetar i 64 bitar så sparar vi 64 bitar per plats. Dvs 8 bytes per plats.
 
-Hur många bytes kan vi lagra? Vi lagrar 16GB. En GB = $2^{30}$ bytes. (Egentligen borde vi skriva GiB, se slides föreläsning 2, men vi använder enkelt här att GB är $2^{40}$ inte $10^9$)
+Hur många bytes kan vi lagra? Vi lagrar 16GB. En GB = $2^{30}$ bytes. (Egentligen borde vi skriva GiB, se slides föreläsning 2, men vi använder enkelt här att GB är $2^{30}$ inte $10^9$)
 
 Därmed lagrar vi $16 * 2^{30}$ bytes.  
 Detta är dock en jobbig uträkning, vi skriver därmed om 16 som $2^4$.  
@@ -142,7 +142,7 @@ Vi lagrar därmed $2^{34}$ bytes i vårt minne. Dock lagrar vi ju mer än en byt
 
 Vi lagrar specifikt 8 bytes per plats, vi behöver därmed en åttondel så många adresser.
 
-Detta get $\frac{2^{34}}{8}$, än en gång en ganska svår utäkning som den står nu.  
+Detta get $\frac{2^{34}}{8}$, än en gång en ganska svår uträkning som den står nu.  
 Vi gör om vår åtta till en potens: $\frac{2^{34}}{2^3}$.  
 vi kan nu använda våra regler nedan: $ = \frac{2^{34}}{2^3} = 2^{34-3} = 2^{31}$.
 
