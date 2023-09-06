@@ -23,7 +23,7 @@ export default async function Page({ params }: PageProps) {
   return (
     <>
       <ReactMarkdown
-        className="prose-defaults mx-auto h-fitToHeader !max-w-none overflow-y-auto bg-slate-800 px-5 py-3 prose-headings:my-2 prose-h1:text-center prose-table:w-min"
+        className="prose-defaults mx-auto h-fitToHeader !max-w-none overflow-y-auto bg-slate-800 px-5 py-3 prose-headings:my-2 prose-h1:text-center prose-table:w-fit prose-thead:text-center"
         remarkPlugins={[remarkGFM, remarkMath]}
         rehypePlugins={[
           [
