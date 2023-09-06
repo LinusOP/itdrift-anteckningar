@@ -6,7 +6,7 @@ title: Datateknisk Introduktion - Föreläsning 5
 
 Se slides för diagram och bilder.
 
-# Datorns delar i mer detalj
+## Datorns delar i mer detalj
 
 Datorn har tre olika huvudsystem:
 
@@ -16,7 +16,7 @@ Datorn har tre olika huvudsystem:
 
 Alla dessa tre är ihopkopplade och kan därmed "prata" med varandra.
 
-## CPU/Processor
+### CPU/Processor
 
 Har tre huvuddelar (egentligen mycket mer, men dessa är de vi kollar på):
 
@@ -24,7 +24,7 @@ Har tre huvuddelar (egentligen mycket mer, men dessa är de vi kollar på):
 - CU (Control Unit) / Styrenhet - Kontrollerar andra system, är den som styr processorns övriga delar och avkodar instruktionerna för resten av dessa delar
 - Register - Processorns egna lagringsplatser, inte så stor plats men väldigt snabbt.
 
-## Arbetsminne / Primärminne / RAM (Random Access Memory)
+### Arbetsminne / Primärminne / RAM (Random Access Memory)
 
 Har två huvuddelar:
 
@@ -49,7 +49,7 @@ Lite som en tabell:
 I detta fall sparar vi en byte (8 bitar) i varje minnesplats. Normalt sett är detta 64 bitar, 8 bytes.  
 Mer om detta nedan under bussar.
 
-### Kategorier på minne
+#### Kategorier på minne
 
 - Flyktiga - Försvinner strömmen så försvinner datan
 - Läs/SKrivbara
@@ -61,7 +61,7 @@ Mer om detta nedan under bussar.
 
 **Se slides för illustration över minneshierarkin**
 
-### Andre bregrepp
+#### Andra bregrepp
 
 - Cacheminne
   - Kopia som används mellan olika nivåer i hierarkien
@@ -124,7 +124,7 @@ Bussar mellan CPU och arbetsminnet:
 
 Generellt om man pratar om t.ex en 64 bitars dator så innebär det att bussbredden på databussen är 64 bitar.
 
-# Exempel på beräkningar med detta
+## Exempel på beräkningar med detta
 
 Har vi ett arbetsminne på 16GB, hur många bitar behövs för adressering? Dvs, vad är bussbredden på vår adressbuss.
 
@@ -150,9 +150,9 @@ Detta är mängden adresser vi behöver, detta innebär att vi behöver 31 siffr
 
 Normalt sett hade man gått till närmaste 2-potens, dvs 32. Men allra minst behöver vår adressbuss ha en bredd på 31 bitar för att kunna skicka adresser som är långa nog för att där finns en till varje adressplats i vårt minne.
 
-## Potens reglerna
+### Potens reglerna
 
 Krävs för att förstå uträkningen ovan
 
-$a^x + a^y = a^{x+y}$
+$a^x + a^y = a^{x+y}$  
 $\frac{a^x}{a^y} = a^{x-y}$
