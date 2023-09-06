@@ -16,7 +16,7 @@ export default function Header() {
           IT-Drifttekniker - Anteckningar
         </span>
       </Link>
-      <div className="block sm:hidden">
+      <div className="block md:hidden">
         {navOpen ? (
           <X size={48} onClick={() => toggle(!navOpen)} />
         ) : (
