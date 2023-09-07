@@ -52,7 +52,7 @@ export default async function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={`${font.variable} bg-slate-800 font-sans`}>
-        <div className="relative grid h-[100dvh] w-[100dvw] grid-cols-1 grid-rows-[theme(spacing.20),_1fr] overflow-x-hidden md:grid-cols-[theme(spacing.96),_1fr]">
+        <div className="relative grid h-[100dvh] w-[100dvw] grid-cols-1 grid-rows-[theme(spacing.20),_1fr] overflow-x-hidden lg:grid-cols-[theme(spacing.96),_1fr]">
           <NavStateProvider>
             <Header />
             <MobileNav formattedData={formattedData} />

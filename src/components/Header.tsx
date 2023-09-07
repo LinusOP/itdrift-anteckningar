@@ -12,11 +12,11 @@ export default function Header() {
     <header className="col-span-2 flex h-20 items-center justify-between bg-slate-950 px-5 text-white">
       <Link href="/" className="flex items-center gap-2">
         <PenSquare size={48} />
-        <span className="hidden text-5xl font-extrabold md:inline">
+        <span className="hidden text-5xl font-extrabold lg:inline">
           IT-Drifttekniker - Anteckningar
         </span>
       </Link>
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         {navOpen ? (
           <X size={48} onClick={() => toggle(!navOpen)} />
         ) : (

@@ -23,7 +23,7 @@ export default function MobileNav({
   return (
     <nav
       className={twMerge(
-        "absolute bottom-0 left-0 z-10 flex h-fitToHeader w-full flex-col justify-between overflow-y-auto bg-slate-900 px-3 text-white transition-transform md:hidden",
+        "absolute bottom-0 left-0 z-10 flex h-fitToHeader w-full flex-col justify-between overflow-y-auto bg-slate-900 px-3 text-white transition-transform lg:hidden",
         !navOpen && "translate-x-full",
       )}
     >
