@@ -1,7 +1,7 @@
-import fs from "fs";
 import path from "path";
 import { glob } from "glob";
 import matter from "gray-matter";
+import z from "zod";
 
 export async function getPostData() {
   const postPaths = await glob("src/posts/*/*.md");
@@ -24,11 +24,17 @@ export function getPostFromSlug({
   course: string;
   fileName: string;
 }) {
-  const raw = fs.readFileSync(
+  const parsed = matter.read(
     path.join(process.cwd(), "src", "posts", course, fileName),
-    {
-      encoding: "utf-8",
-    },
   );
-  return matter(raw);
+
+  return {
+    ...parsed,
+    data: z
+      .strictObject({
+        title: z.string(),
+        order: z.number().optional(),
+      })
+      .parse(parsed.data),
+  };
 }
