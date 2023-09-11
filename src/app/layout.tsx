@@ -23,24 +23,68 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const postData = await getPostData();
+
   const formattedData = Object.entries(courseCodes).map(
     ([courseCode, courseName]) => ({
       name: courseName,
       code: courseCode,
-      posts: postData
-        .filter((post) => post.course === courseCode)
-        .map((post) => ({
-          fileName: post.fileName,
-          title: getPostFromSlug(post).data.title,
-        }))
+      // The below is very confusing, I know...
+      posts: Object.entries(
+        postData
+          // We only want the posts for this course
+          .filter((postEntry) => postEntry.course === courseCode)
+          // Get all the post data for each post in this course
+          .map((postEntry) => {
+            const post = getPostFromSlug(postEntry);
+
+            return {
+              fileName: postEntry.fileName,
+              title: post.data.title,
+              order: post.data.order,
+            };
+          })
+          // Group the posts by the first part of the filename, e.g intro_forelasning_1.md -> intro
+          // Creates an object with each first part (or category) and its corresponding array of posts
+          .reduce<
+            Record<
+              string,
+              {
+                fileName: string;
+                title: string;
+                order: number | undefined;
+              }[]
+            >
+          >((grouped, post) => {
+            const postCat = post.fileName.split("_")[0];
+
+            return {
+              ...grouped,
+              [postCat]: [...(grouped[postCat] || []), post],
+            };
+          }, {}),
+      )
+        // Sort the posts by their category in alphabetical order
+        .sort((a, b) => a[0].localeCompare(b[0]))
+        // Turn the posts in to one big array where each category is internally sorted by their file number
+        .flatMap(([_, posts]) =>
+          posts.sort((a, b) => {
+            const numRegex = /^.+_([0-9]+)\.md$/;
+            const matchA = a.fileName.match(numRegex);
+            const matchB = b.fileName.match(numRegex);
+
+            if (!matchA || !matchB) return 0;
+
+            return parseInt(matchA[1]) - parseInt(matchB[1]);
+          }),
+        )
         .sort((a, b) => {
-          const numRegex = /^.+_([0-9]+)\.md$/;
-          const matchA = a.fileName.match(numRegex);
-          const matchB = b.fileName.match(numRegex);
+          // 0 basically means we want to retain current order, having both posts at 0 means retain the prior sorting.
+          // If any post has an order > 0 it will end up at the bottom, equally < 0 will end up at the top
+          // This basically sorts those posts at the top and bottom by their order internally, otherwise it ensures we retain our alphabetical sorting
+          const aOrder = a.order ?? 0;
+          const bOrder = b.order ?? 0;
 
-          if (!matchA || !matchB) return 0;
-
-          return parseInt(matchA[1]) - parseInt(matchB[1]);
+          return aOrder - bOrder;
         }),
     }),
   );
