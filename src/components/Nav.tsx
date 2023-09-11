@@ -16,7 +16,7 @@ export default async function Nav({
   return (
     <nav
       className={
-        "hidden h-fitToHeader flex-col justify-between overflow-y-auto bg-slate-900 px-3 text-white lg:flex"
+        "scrollbar-styles hidden h-fitToHeader flex-col justify-between overflow-y-auto bg-slate-900 px-3 text-white lg:flex"
       }
     >
       <NavAccordion items={formattedData} />
