@@ -20,9 +20,9 @@ Oftast ställer man upp detta som addition, något såhär:
 
 $$
 \begin{array}{c}
-\phantom{\text{\scriptsize{XOR}\space}} 0111 \\
-\underline{\text{\scriptsize{XOR}\space} 1011} \\
-\phantom{\text{\scriptsize{XOR}\space}} 1111
+\phantom{\text{\scriptsize{OR}\space}} 0111 \\
+\underline{\text{\scriptsize{OR}\space} 1011} \\
+\phantom{\text{\scriptsize{OR}\space}} 1111
 \end{array}
 $$
 
