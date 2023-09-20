@@ -8,6 +8,7 @@ import NavStateProvider from "@/utils/navContext";
 import MobileNav from "@/components/MobileNav";
 import { getPostData, getPostFromSlug } from "@/lib/api";
 import { courseCodes } from "@/config/courses";
+import { categoryConfig } from "@/config/categories";
 
 const font = Open_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -63,14 +64,21 @@ export default async function RootLayout({
             };
           }, {}),
       )
-        // Sort the posts by their category in alphabetical order
-        .sort((a, b) => a[0].localeCompare(b[0]))
+        // Sort the posts by their category in alphabetical order or their defined order number if there is one
+        .sort((a, b) => {
+          const catA = a[0];
+          const catB = b[0];
+          const aOrder =
+            categoryConfig[catA]?.order ?? catA.localeCompare(catB);
+          const bOrder =
+            categoryConfig[catB]?.order ?? catB.localeCompare(catA);
+
+          return aOrder - bOrder;
+        })
         // Turn the posts in to one big array where each category is internally sorted by the posts order
         .flatMap(([_, posts]) =>
           posts.sort((a, b) => {
-            // 0 basically means we want to retain current order, having both posts at 0 means retain the prior sorting.
-            // If any post has an order > 0 it will end up at the bottom, equally < 0 will end up at the top
-            // This basically sorts those posts at the top and bottom by their order internally, otherwise it ensures we retain our alphabetical sorting
+            // Sort the posts of each category and then flatten them to one big array of posts
             const aOrder = a.order ?? 0;
             const bOrder = b.order ?? 0;
 
