@@ -1,5 +1,6 @@
 ---
 title: Datateknisk Introduktion - Föreläsning 5
+order: 50
 ---
 
 # Datateknisk Introduktion - Föreläsning 5

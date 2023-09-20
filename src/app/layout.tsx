@@ -65,27 +65,18 @@ export default async function RootLayout({
       )
         // Sort the posts by their category in alphabetical order
         .sort((a, b) => a[0].localeCompare(b[0]))
-        // Turn the posts in to one big array where each category is internally sorted by their file number
+        // Turn the posts in to one big array where each category is internally sorted by the posts order
         .flatMap(([_, posts]) =>
           posts.sort((a, b) => {
-            const numRegex = /^.+_([0-9]+)\.md$/;
-            const matchA = a.fileName.match(numRegex);
-            const matchB = b.fileName.match(numRegex);
+            // 0 basically means we want to retain current order, having both posts at 0 means retain the prior sorting.
+            // If any post has an order > 0 it will end up at the bottom, equally < 0 will end up at the top
+            // This basically sorts those posts at the top and bottom by their order internally, otherwise it ensures we retain our alphabetical sorting
+            const aOrder = a.order ?? 0;
+            const bOrder = b.order ?? 0;
 
-            if (!matchA || !matchB) return 0;
-
-            return parseInt(matchA[1]) - parseInt(matchB[1]);
+            return aOrder - bOrder;
           }),
-        )
-        .sort((a, b) => {
-          // 0 basically means we want to retain current order, having both posts at 0 means retain the prior sorting.
-          // If any post has an order > 0 it will end up at the bottom, equally < 0 will end up at the top
-          // This basically sorts those posts at the top and bottom by their order internally, otherwise it ensures we retain our alphabetical sorting
-          const aOrder = a.order ?? 0;
-          const bOrder = b.order ?? 0;
-
-          return aOrder - bOrder;
-        }),
+        ),
     }),
   );
 

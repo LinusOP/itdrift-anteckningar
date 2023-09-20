@@ -1,4 +1,4 @@
-export const courseCodes: Record<string, string> = {
+export const courseCodes = {
   itd11e: "Introduktion till informationsteknologi",
   itd12c: "Nätverksteknik 1",
   itd22e: "Molnbaserade tjänster",
@@ -7,4 +7,4 @@ export const courseCodes: Record<string, string> = {
   itd21c: "Nätverksteknik II",
   itd14a: "Projektkurs i IT-driftteknik",
   itd13d: "Infrastrukturella serversystem 1",
-};
+} as const;

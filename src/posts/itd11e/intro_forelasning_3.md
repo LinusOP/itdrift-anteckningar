@@ -1,5 +1,6 @@
 ---
 title: Datateknisk Introduktion - Föreläsning 3
+order: 30
 ---
 
 # Datateknisk Introduktion - Föreläsning 3

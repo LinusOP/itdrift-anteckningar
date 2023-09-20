@@ -1,5 +1,6 @@
 ---
 title: Datateknisk Introduktion - Föreläsning 4
+order: 40
 ---
 
 # Datateknisk Introduktion - Föreläsning 4
