@@ -7,7 +7,7 @@ order: 70
 
 ## Bitmönster
 
-Har vi två bitmönster, ex:
+Ett bitmönster är egentligen bara en sekvens av bitar, t.ex så är detta två bitmönster:
 
 ```
 0111
@@ -19,11 +19,11 @@ Skulle vi sen ta dessa igenom en OR grind så jämför vi varje position för va
 Oftast ställer man upp detta som addition, något såhär:
 
 $$
-\begin{aligned}
-0111 \\
-\text{XOR } 1011 \\
-\hline 1111
-\end{aligned}
+\begin{array}{c}
+\phantom{\text{\scriptsize{XOR}\space}} 0111 \\
+\underline{\text{\scriptsize{XOR}\space} 1011} \\
+\phantom{\text{\scriptsize{XOR}\space}} 1111
+\end{array}
 $$
 
 Man utför sen den logiska operationen på bitarna som är ovanför varandra, en position i taget.
@@ -35,21 +35,21 @@ En mask är ett fast bitmönster som man använder på andra bitmönster för at
 Ex, om vi har bitmönstret `0110` och vi vill skapa en mask, ett bitmönster, som gör att alla bitar blir 0. Då kan vi i detta fall använda en AND operation med enbart 0or som mask.
 
 $$
-\begin{aligned}
-0110 \\
-\text{AND } 0000 \\
-\hline 0000
-\end{aligned}
+\begin{array}{c}
+\phantom{\text{\scriptsize{AND}\space}} 0110 \\
+\underline{\text{\scriptsize{AND}\space} 0000} \\
+\phantom{\text{\scriptsize{AND}\space}} 0000
+\end{array}
 $$
 
 Ett annat exempel är om man vill använda en mask som enbart ger 1or, då kan vi använda en OR operation med enbart 1or.
 
 $$
-\begin{aligned}
-0110 \\
-\text{OR } 1111 \\
-\hline 1111
-\end{aligned}
+\begin{array}{c}
+\phantom{\text{\scriptsize{OR}\space}} 0110 \\
+\underline{\text{\scriptsize{OR}\space} 1111} \\
+\phantom{\text{\scriptsize{OR}\space}} 1111
+\end{array}
 $$
 
 ## Binär addition
@@ -59,11 +59,11 @@ Exempel tal i decimal form: $7 + 5 = 12$
 Oftast ställer vi upp detta som så:
 
 $$
-\begin{aligned}
-7 \\
-+ \space 5 \\
-\hline 12
-\end{aligned}
+\begin{array}{c}
+\phantom{+0} 7 \\
+\underline{+\phantom{0} 5} \\
+\phantom{+} 12
+\end{array}
 $$
 
 I binär form:  
@@ -73,11 +73,11 @@ $5_{10} = 0101$
 Additionen ser då ut såhär:
 
 $$
-\begin{aligned}
-0111 \\
-+ \space 0101 \\
-\hline 1100
-\end{aligned}
+\begin{array}{c}
+\phantom{+\space} 0111 \\
+\underline{+\space 0101} \\
+\phantom{+\space} 1100
+\end{array}
 $$
 
 Hur vi kommer dit är dock inte självklart. Men egentligen är principe samma som i decimal addition, vi använder minnessiffror.
@@ -85,16 +85,16 @@ Hur vi kommer dit är dock inte självklart. Men egentligen är principe samma s
 Tittar vi i decimal form ser additionen ut såhär:
 
 $$
-\begin{aligned}
-\underline{1}& \\
-&7 \\
-+ \enspace &5 \\
-\hline 1&2
-\end{aligned}
+\begin{array}{c}
+\phantom{+} \underline{1}\phantom{0} \\
+\phantom{+0} 7 \\
+\underline{+\phantom{0} 5} \\
+\phantom{+} 12
+\end{array}
 $$
 
 **Här kommer steg för steg av binär addition senare**
 
 ## Binär subtraktion
 
-**Kommer också senare**
+**Kommer också senare med steg för steg**
