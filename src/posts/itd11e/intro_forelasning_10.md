@@ -1,6 +1,6 @@
 ---
 title: Datateknisk introduktion - Föreläsning 10
-order: 910
+order: 100
 ---
 
 # Föreläsning 10 - Processer
