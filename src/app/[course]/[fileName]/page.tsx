@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGFM from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import rehypeExternalLinks from "rehype-external-links";
 
 import "katex/dist/katex.min.css";
 
@@ -33,6 +34,12 @@ export default async function Page({ params }: PageProps) {
               trust: true,
               fleqn: true,
               strict: false,
+            },
+          ],
+          [
+            rehypeExternalLinks,
+            {
+              target: "_blank",
             },
           ],
         ]}
