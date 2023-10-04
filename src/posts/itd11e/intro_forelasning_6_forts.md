@@ -35,7 +35,7 @@ Spänningspotentialen kan man kort sagt säga är hur gärna strömmen vill vand
 
 Säg att vi har följande krets:
 
-![](/intro_forelasning_7/krets.png)
+![](/intro_forelasning_6_forts/krets.png)
 
 Vi vill veta spänningspotentialen i varje punkt (C, A, B), nere till vänster har vi jord och därmed är det per definition en potential 0V där.
 
@@ -73,7 +73,7 @@ Samma princip gäller om man har två parallelkopplade resistorer.
 
 Formeln för detta: $I_1 = I * \frac{R_2}{R_2 + R_1}$  
 Detta gäller då komponenterna ser ut som såhär:
-![](/intro_forelasning_7/krets2.png)
+![](/intro_forelasning_6_forts/krets2.png)
 
 ### Effekt
 
