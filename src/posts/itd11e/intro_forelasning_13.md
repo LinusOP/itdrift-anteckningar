@@ -7,9 +7,9 @@ order: 130
 
 För att få all datorer att förstå varandra i ett nätverkspespektiv så behövs en standard. Den standard man kom fram till kallas TCP/IP.
 
-Modelled delas in i olika lager.
+Modellen delas in i olika lager.
 
-## Lager i nätverskteknik
+## Lager i TCP/IP modellen
 
 ### Lager 5 - Application
 
@@ -68,7 +68,7 @@ Dessa används för transporten inuti ett nät. Varje enhet inuti nätet, dvs va
 
 #### Switch
 
-**Kommer senare**
+Ett exempel på en enhet som jobbar med MAC-Adresser är switchar. Dessa håller reda på vilken mac-adress som är kopplad till vilken fysisk port, och vet således var den ska skicka data.
 
 ### Lager 1 - Fysiskt
 
