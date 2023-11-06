@@ -22,30 +22,28 @@ export default async function Page({ params }: PageProps) {
   const { content } = getPostFromSlug(params);
 
   return (
-    <>
-      <ReactMarkdown
-        className="prose-defaults scrollbar-styles mx-auto h-fitToHeader !max-w-none overflow-y-auto bg-slate-800 px-5 py-3 prose-headings:my-2 prose-h1:text-center prose-pre:w-fit prose-table:w-fit prose-thead:text-center"
-        remarkPlugins={[remarkGFM, remarkMath]}
-        rehypePlugins={[
-          [
-            rehypeKatex,
-            {
-              macros: { ",": "{\\char`,}" },
-              trust: true,
-              fleqn: true,
-              strict: false,
-            },
-          ],
-          [
-            rehypeExternalLinks,
-            {
-              target: "_blank",
-            },
-          ],
-        ]}
-      >
-        {content}
-      </ReactMarkdown>
-    </>
+    <ReactMarkdown
+      className="prose-defaults scrollbar-styles mx-auto h-fitToHeader !max-w-none overflow-y-auto bg-slate-800 px-5 py-3 prose-headings:my-2 prose-h1:text-center prose-pre:w-fit prose-table:w-fit prose-thead:text-center"
+      remarkPlugins={[remarkGFM, remarkMath]}
+      rehypePlugins={[
+        [
+          rehypeKatex,
+          {
+            macros: { ",": "{\\char`,}" },
+            trust: true,
+            fleqn: true,
+            strict: false,
+          },
+        ],
+        [
+          rehypeExternalLinks,
+          {
+            target: "_blank",
+          },
+        ],
+      ]}
+    >
+      {content}
+    </ReactMarkdown>
   );
 }
