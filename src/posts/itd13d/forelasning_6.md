@@ -105,7 +105,7 @@ För adressen `192.168.10.56` så hade PTR posten sett ut som så: `56.10.168.19
 
 Har vi en domän såsom `example.com` men vill ha en "del" av denna för IT-avdelningen så kan vi skapa en subdomän som er ut som följande `it.example.com`. En subdomän kan antingen hanteras av samma DNS server som vår huvuddomän eller så kan ansvaret delegeras till en annan server.
 
-IT-avdelningen kanske själva ska ha hand om sin subdomän men en konsult har han om huvuddomänen, då kam man delegera asnavret för `it.example.com` till IT-avdelningens egna DNS server.
+IT-avdelningen kanske själva ska ha hand om sin subdomän men en konsult har han om huvuddomänen, då kam man delegera ansvaret för `it.example.com` till IT-avdelningens egna DNS server.
 
 ### Separata domäner
 
