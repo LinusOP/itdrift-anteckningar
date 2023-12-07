@@ -203,3 +203,18 @@ I detta fall samarbetar två Hyper-V servrar. När man startar en live migration
 #### Kluster
 
 Här kommunicerar flera servrar och sköter flytten automatiskt. Dvs börjar en server bli överbelastad så flyttas VMs till en annan hyper-v server automatiskt utan att man själv måste starta flytten.
+
+## Checkpoints
+
+Tar en överblicksbild av en VM. Man har då möjlighet att återställa till den virtuella maskinens läge när man tog sin checkpoint. Bra att använda t.ex då man gör uppdateringar osv.
+
+Finns två typer:
+
+- Productions - Återställer inte inställningar gjorda i applikationer
+- Standard - Återställer hela maskinens läge
+
+## Nätverk i Hyper-V
+
+I hyper-v skapar och arbetar man med virtuella switchar. Dessa har en obegränsad mängd portar. De kan också använda VLAN för att isolera maskiner kopplade till samma switch.
+
+Dock finns där begränsningar, det finns inget sätt att routa mellan olika virtuella switchar enbart med hjälp av hyper-v. Isåfall får man skapa en VM som agerar router mellan de olika näten.
