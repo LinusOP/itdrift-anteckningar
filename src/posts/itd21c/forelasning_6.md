@@ -51,7 +51,12 @@ Som vi ser är R4 en mycket billigare väg än R2 för att R1 ska nå nät Y.
 
 ### Default-värden hastighet och fördröjning
 
-**Kommer**
+| Hastighet | Hastighet (Kbps) | Potensform  | Fördröjning (µs) |
+| --------- | ---------------- | ----------- | ---------------- |
+| 10 Mbps   | 10 000           | $10^4$ Kbps | 1000             |
+| 100 Mbps  | 100 000          | $10^5$ Kbps | 100              |
+| 1 Gbps    | 1 000 000        | $10^6$ Kbps | 10               |
+| 10 Gbps   | 10 000 000       | $10^7$ Kbps | 10               |
 
 ## Konvergens
 
