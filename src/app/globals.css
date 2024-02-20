@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .prose-defaults {
-  @apply prose prose-sm prose-slate prose-invert sm:prose-base lg:prose-lg xl:prose-xl;
+  @apply prose prose-base prose-slate prose-invert sm:prose-lg lg:prose-xl xl:prose-2xl;
 }
 
 .scrollbar-styles {

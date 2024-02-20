@@ -25,7 +25,7 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <ReactMarkdown
-      className="prose-defaults scrollbar-styles mx-auto h-fitToHeader !max-w-none overflow-y-auto bg-slate-800 px-5 py-3 prose-headings:my-2 prose-h1:text-center prose-code:rounded prose-code:border prose-code:border-slate-600 prose-code:bg-black/50 prose-code:px-1 prose-code:py-0.5 prose-pre:w-fit prose-pre:border prose-pre:border-slate-600 prose-pre:p-2 prose-pre:font-semibold prose-pre:text-white *:prose-pre:border-none *:prose-pre:px-0 *:prose-pre:py-0 prose-table:w-fit prose-thead:text-center"
+      className="prose-defaults scrollbar-styles mx-auto h-fitToHeader !max-w-none overflow-y-auto bg-slate-800 px-5 py-3 prose-headings:my-2 prose-h1:text-center prose-code:rounded prose-code:border prose-code:border-slate-600 prose-code:bg-black/50 prose-code:px-1 prose-code:py-0.5 prose-pre:w-fit prose-pre:border prose-pre:border-slate-600 prose-pre:p-2 prose-pre:text-[1em] prose-pre:font-semibold prose-pre:text-white *:prose-pre:border-none *:prose-pre:bg-transparent *:prose-pre:px-0 *:prose-pre:py-0 prose-table:w-fit prose-thead:text-center"
       remarkPlugins={[remarkGFM, remarkMath]}
       rehypePlugins={[
         [
@@ -54,10 +54,10 @@ export default async function Page({ params }: PageProps) {
               {...rest}
               language={match[1]}
               style={style}
-              customStyle={{ background: "", padding: 0, margin: 0 }}
+              customStyle={{ background: "transparent", padding: 0, margin: 0 }}
               codeTagProps={{
                 style: {
-                  background: "",
+                  background: "transparent",
                 },
               }}
             >

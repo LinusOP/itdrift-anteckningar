@@ -36,7 +36,7 @@ $zone = "example.com"
 Add-DnsServerPrimaryZone -Name $zone -ZoneFile "example.org.dns"
 
 Add-DnsServerResourceRecordA -Name "SRV01" -ZoneName $zone -IPv4Address 192.168.0.10
-Add-DnsServerResourceRecordA -Name "SRV02"-ZoneName $zone -IPv4Address 192.168.0.20
+Add-DnsServerResourceRecordA -Name "SRV02" -ZoneName $zone -IPv4Address 192.168.0.20
 ```
 
 Som vi ser så behöver vi bara skriva ut vår zon en gång, och kan sen återanvända denna flera gånger.
