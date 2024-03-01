@@ -15,4 +15,12 @@ I NAT delar vi in nät i areor, inom Cisco benämnt insida (inside) och utsida (
 
 ### Statisk
 
-Den enklaste formen av NAT är statisk NAT. Här är principen att varje privat IP adress är matchad med en publik IP adress i en tabell. När paket går genom routern
+**Kommer**
+
+### Dynamisk
+
+**Kommer**
+
+### PAT
+
+**Kommer**
